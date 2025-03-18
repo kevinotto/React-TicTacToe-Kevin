@@ -8,7 +8,7 @@ export default function Board({ xIsNext, squares, onPlay, winningSquares = [] })
 
     const nextSquares = squares.slice();
     nextSquares[i] = xIsNext ? 'X' : 'O';
-    onPlay(nextSquares);
+    onPlay(nextSquares, i);
   }
 
   function isWinningSquare(index) {
